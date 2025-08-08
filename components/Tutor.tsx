@@ -23,17 +23,17 @@ const TutorCard: React.FC<TutorCardProps> = ({ tutor }) => {
     };
 
     return (
-        <article className="group bg-white rounded-lg overflow-hidden shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 cursor-pointer">
+        <article className="group bg-white rounded-lg overflow-hidden mx-8 shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 cursor-pointer">
             {/* Image Container */}
             <div className={`relative overflow-hidden aspect-square`}>
                 <img
                     src={tutor.image}
                     alt={tutor.name}
                     
-                    className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+                    className="w-full h-full scale-100 object-fit object-center transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
                 {/* Overlay effect on hover */}
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500"></div>
+                {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500"></div> */}
             </div>
 
             {/* Content */}
@@ -69,7 +69,7 @@ const TutorsSection: React.FC = () => {
             id: '1',
             name: 'Dr. Sarabjot Singh Anand',
             role: 'MENTOR',
-            image: '/features-img1.png',
+            image: 'features-img1.png',
             bgColor: 'orange',
             description: 'Dr. Sarabjot Singh Anand has been involved in the field of Machine Learning since the early 1990s. He has published over 90 academic papers on machine learning while an Associate Professor at the University of Warwick and previous academic posts in the United Kingdom. His first startup in Ireland even won the European IST grand prize amongst other technology accolades.'
         },
@@ -77,7 +77,7 @@ const TutorsSection: React.FC = () => {
             id: '2',
             name: 'Chinyere James',
             role: 'DATA ENGINEER INSTRUCTOR',
-            image: './features-img2.png',
+             image: 'features-img2.png',
             bgColor: 'gray',
             description: 'Chinenye is currently serving as an Epidemiological Data Analyst Specialist at the World Health Organization (WHO) AFRO Dakar Hub, where she works at the forefront of public health surveillance and outbreak intelligence across Africa. In this role, she leads critical work on geospatial data integration, disease tracking, and predictive analytics using tools such as PostgreSQL, SQL, PostGIS, Python, and GeoDjango.'
         },

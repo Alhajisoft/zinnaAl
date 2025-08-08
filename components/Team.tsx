@@ -67,7 +67,7 @@ const DataTransitionHero: React.FC = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-amber-900 via-yellow-900 to-amber-800 overflow-hidden">
+    <div className="relative h-70 bg-gradient-to-br from-amber-900 via-yellow-900 to-amber-800 overflow-hidden">
       
       {/* Dynamic Stars */}
       {stars.map((star, index) => (
