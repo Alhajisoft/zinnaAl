@@ -53,7 +53,7 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt, bgColor }) => {
 // Testimonial Card component
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
     return (
-        <article className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-200 cursor-pointer">
+        <article className="  rounded-xl p-6 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-200 cursor-pointer">
             {/* Profile Section */}
             <header className="flex items-center space-x-3 mb-4">
                 <Avatar
@@ -104,7 +104,7 @@ const Testimonials: React.FC = () => {
     ];
 
     return (
-        <section className="mb-16 bg-gradient-to-br from-gray-50 to-gray-100 py-16 -mx-4">
+        <section className="mb-16  py-16 -mx-4">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <header className="text-center mb-12">

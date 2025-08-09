@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+
 // Types
 interface Tutor {
     id: string;
@@ -23,40 +24,41 @@ const TutorCard: React.FC<TutorCardProps> = ({ tutor }) => {
     };
 
     return (
-        <article className="group bg-white rounded-lg overflow-hidden mx-8 shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 cursor-pointer">
+        <article className="group bg-white rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 lg:hover:-translate-y-3 hover:scale-[1.02] lg:hover:scale-105 cursor-pointer">
             {/* Image Container */}
-            <div className={`relative overflow-hidden aspect-square`}>
+            <div className="relative overflow-hidden">
                 <img
                     src={tutor.image}
                     alt={tutor.name}
-                    
-                    className="w-full h-full scale-100 object-fit object-center transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+                    className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
-                {/* Overlay effect on hover */}
-                {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500"></div> */}
             </div>
 
             {/* Content */}
-            <div className="p-6 space-y-4">
+            <div className="p-4 sm:p-5 lg:p-6 space-y-3 sm:space-y-4">
                 {/* Role Badge */}
                 <div className="inline-block">
-                    <span className="text-xs font-semibold text-[6f4a1c] uppercase  bg-amber-50 px-3 py-1 ">
+                    <span className="text-xs sm:text-xs lg:text-sm font-semibold text-[#6f4a1c] uppercase px-2 sm:px-3 py-1 rounded-full ">
                         {tutor.role}
                     </span>
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl font-bold text-[#1d1001] transition-colors duration-300 group-hover:text-amber-700">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text--[#1d1001] transition-colors duration-300 group-hover:text--[#1d1001] leading-tight">
                     {tutor.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[1d1001] text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                <p className="text-[1d1001] text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-300 group-hover:text-[#1d1001] line-clamp-4 sm:line-clamp-none">
                     {tutor.description}
                 </p>
 
-                {/* Animated underline */}
-                <div className="w-0 h-0.5 bg-gradient-to-r from-amber-500 to-orange-500 transition-all duration-500 group-hover:w-full"></div>
+                
+                
+                {/* Read more indicator for mobile */}
+                <div className="sm:hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-xs text-amber-600 font-medium">Tap to learn more →</span>
+                </div>
             </div>
         </article>
     );
@@ -77,7 +79,7 @@ const TutorsSection: React.FC = () => {
             id: '2',
             name: 'Chinyere James',
             role: 'DATA ENGINEER INSTRUCTOR',
-             image: 'features-img2.png',
+            image: 'features-img2.png',
             bgColor: 'gray',
             description: 'Chinenye is currently serving as an Epidemiological Data Analyst Specialist at the World Health Organization (WHO) AFRO Dakar Hub, where she works at the forefront of public health surveillance and outbreak intelligence across Africa. In this role, she leads critical work on geospatial data integration, disease tracking, and predictive analytics using tools such as PostgreSQL, SQL, PostGIS, Python, and GeoDjango.'
         },
@@ -85,44 +87,43 @@ const TutorsSection: React.FC = () => {
             id: '3',
             name: 'Chidi Henry',
             role: 'CEO/ ML INSTRUCTOR',
-            image: '/features-img3.png',
+            image:'features-img3.png',
             bgColor: 'yellow',
             description: 'Chinenye is currently serving as an Epidemiological Data Analyst Specialist at the World Health Organization (WHO) AFRO Dakar Hub, where she works at the forefront of public health surveillance and outbreak intelligence across Africa. In this role, she leads critical work on geospatial data integration, disease tracking, and predictive analytics using tools such as PostgreSQL, SQL, PostGIS, Python, and GeoDjango.'
         }
     ];
 
     return (
-        <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <section className="py-8 sm:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="text-center mb-16 space-y-6">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#141414] tracking-tight">
-                        Meet some of our Tutors
-
+                <div className="text-center mb-8 sm:mb-12 lg:mb-16 space-y-4 sm:space-y-6">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#141414] tracking-tight leading-tight">
+                        Meet some of our TutorsSection
                     </h1>
 
-                    <p className="text-[#5e5d6f] text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+                    <p className="text-[#5e5d6f] text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
                         Meet our leadership team at Surest! We are passionate professionals dedicated to simplifying utility
                         payments and innovation, bringing diverse expertise in technology, finance, and business to our
                         platform.
                     </p>
 
                     {/* Decorative element
-                    <div className="flex justify-center items-center space-x-2 mt-8">
-                        <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
-                        <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse"></div>
-                        <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full"></div>
+                    <div className="flex justify-center items-center space-x-2 mt-4 sm:mt-6 lg:mt-8">
+                        <div className="w-8 sm:w-12 lg:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-amber-500 rounded-full animate-pulse"></div>
+                        <div className="w-8 sm:w-12 lg:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full"></div>
                     </div> */}
                 </div>
 
                 {/* Tutors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12">
                     {tutorsData.map((tutor, index) => (
                         <div
                             key={tutor.id}
                             className="opacity-0 animate-fade-in-up"
                             style={{
-                                animationDelay: `${index * 200}ms`,
+                                animationDelay: `${index * 150}ms`,
                                 animationFillMode: 'forwards'
                             }}
                         >
@@ -130,25 +131,49 @@ const TutorsSection: React.FC = () => {
                         </div>
                     ))}
                 </div>
+
+                {/* Mobile scroll indicator */}
+                <div className="sm:hidden text-center mt-6">
+                    <p className="text-xs text-gray-500">
+                        Swipe cards to explore more →
+                    </p>
+                </div>
             </div>
 
             {/* Custom CSS for animations */}
             <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out;
-        }
-      `}</style>
+                @keyframes fade-in-up {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                .animate-fade-in-up {
+                    animation: fade-in-up 0.8s ease-out;
+                }
+
+                /* Line clamp utility for mobile description truncation */
+                .line-clamp-4 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                @media (min-width: 640px) {
+                    .line-clamp-4 {
+                        display: block;
+                        -webkit-line-clamp: unset;
+                        -webkit-box-orient: unset;
+                        overflow: visible;
+                    }
+                }
+            `}</style>
         </section>
     );
 };
