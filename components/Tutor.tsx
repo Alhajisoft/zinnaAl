@@ -24,7 +24,7 @@ const TutorCard: React.FC<TutorCardProps> = ({ tutor }) => {
     };
 
     return (
-        <article className="group bg-white rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 lg:hover:-translate-y-3 hover:scale-[1.02] lg:hover:scale-105 cursor-pointer">
+        <article className="group bg-white rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden cursor-pointer">
             {/* Image Container */}
             <div className="relative overflow-hidden">
                 <img
