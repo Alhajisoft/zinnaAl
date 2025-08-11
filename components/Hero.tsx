@@ -3,7 +3,7 @@ import { Phone } from 'lucide-react';
 
 const Hero: React.FC = () => {
     return (
-        <main className="container mx-auto px-4 md:px-6 lg:px-8">
+        <main className="container mx-auto px-4 md:px-6 lg:px-8 bg-[#F8F5F3] text-[#1d1001]">
             {/* Hero Content */}
             <section className="py-12 md:py-20 lg:py-24 text-center">
                 {/* Badge */}
@@ -25,11 +25,11 @@ const Hero: React.FC = () => {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 mb-8 md:mb-12 px-4">
-                    <button className="w-full sm:w-auto bg-[#6f4a1c] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-[#6f4a1c]/80 transition-colors text-base md:text-lg font-medium">
+                <div className="flex flex-col gap-3 items-center justify-center  px-4">
+                    <button className="w-full sm:w-auto bg-[#6f4a1c] text-white px-6 md:px-10 py-3  rounded-lg hover:bg-[#6f4a1c]/80 transition-colors text-base md:text-lg font-medium">
                         View Programs
                     </button>
-                    <button className="w-full sm:w-auto text-[#6f4a1c] hover:text-[#6f4a1c]/90 transition-colors text-base md:text-lg font-medium underline">
+                    <button className="w-full sm:w-auto font-bold text-[#6f4a1c] hover:text-[#6f4a1c]/90 transition-colors text-base md:text-lg  underline">
                         Download Brochure
                     </button>
                 </div>

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F5F3;
+  --foreground: #F8F5F3;
 }
 
 @theme inline {
@@ -23,7 +23,11 @@
 
 body {
   background-color: #F8F5F3;
-  color: var(--foreground);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
   font-family: Arial, Helvetica, sans-serif;
   /* overflow: hidden; */
 }

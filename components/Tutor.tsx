@@ -17,14 +17,9 @@ interface TutorCardProps {
 
 // Tutor Card Component
 const TutorCard: React.FC<TutorCardProps> = ({ tutor }) => {
-    const backgroundVariants = {
-        orange: 'from-orange-400 to-orange-500',
-        gray: 'from-gray-300 to-gray-400',
-        yellow: 'from-yellow-400 to-yellow-500',
-    };
 
     return (
-        <article className="group bg-white rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden cursor-pointer">
+        <article className="group bg-[#F8F5F3] rounded-md overflow-hidden cursor-pointer">
             {/* Image Container */}
             <div className="relative overflow-hidden">
                 <img
@@ -35,30 +30,23 @@ const TutorCard: React.FC<TutorCardProps> = ({ tutor }) => {
             </div>
 
             {/* Content */}
-            <div className="p-4 sm:p-5 lg:p-6 space-y-3 sm:space-y-4">
+            <div className="p-4">
                 {/* Role Badge */}
                 <div className="inline-block">
-                    <span className="text-xs sm:text-xs lg:text-sm font-semibold text-[#6f4a1c] uppercase px-2 sm:px-3 py-1 rounded-full ">
+                    <span className=" font-semibold text-[#6f4a1c] uppercase text-xs  ">
                         {tutor.role}
                     </span>
                 </div>
 
                 {/* Name */}
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text--[#1d1001] transition-colors duration-300 group-hover:text--[#1d1001] leading-tight">
+                <h3 className="text-[20px] font-bold text-[#1D1001] py-3 leading-tight">
                     {tutor.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[1d1001] text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-300 group-hover:text-[#1d1001] line-clamp-4 sm:line-clamp-none">
+                <p className="text-[#1D1001] text-[15px] leading-relaxed transition-colors duration-300 ">
                     {tutor.description}
                 </p>
-
-                
-                
-                {/* Read more indicator for mobile */}
-                <div className="sm:hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-xs text-amber-600 font-medium">Tap to learn more →</span>
-                </div>
             </div>
         </article>
     );

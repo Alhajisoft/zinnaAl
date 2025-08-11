@@ -178,7 +178,7 @@ const Transition: React.FC = () => {
                     />
                     </div>
                 
-                    <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
+                    <p className="text-gray-600 font-regular text-md max-w-2xl mx-auto px-4">
                         Tired of asking family abroad to help you ship? Now you don't have to.
                     </p>
                 </div>

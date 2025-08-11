@@ -144,7 +144,7 @@ const Course: React.FC = () => {
                         </button>
 
                         {/* Features List */}
-                        <div className="space-y-2 sm:space-y-3">
+                        <div className="space-y-5">
                             {course.features.map((feature) => (
                                 <div 
                                     key={feature.id} 
@@ -163,7 +163,7 @@ const Course: React.FC = () => {
                                     </div>
                                     <span 
                                         className={`text-xs sm:text-sm whitespace-pre-line leading-relaxed ${
-                                            feature.isIncluded ? 'text-gray-700' : 'text-gray-500'
+                                            feature.isIncluded ? 'text-[#1D1001]' : 'text-[#1D1001]'
                                         }`}
                                     >
                                         {feature.text}

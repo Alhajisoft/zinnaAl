@@ -60,7 +60,7 @@ const LearningProblemsSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-8 md:py-16 bg-white">
+        <section className="py-8 md:py-16 bg-[#F8F5F3] ">
             <div className="container mx-auto px-4 md:px-6">
                 {/* Section Header */}
                 <div className="mb-8 md:mb-12 text-center md:text-left">

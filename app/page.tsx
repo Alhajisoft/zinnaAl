@@ -11,7 +11,7 @@ import Footer from '@/components/Footer'
 
 const page = () => {
   return (
-    <>
+    <main className='px-3 lg:px-10'>
       <Navbar />
       <Hero />
       <ProblemCards />
@@ -21,7 +21,7 @@ const page = () => {
       <Tutor />
       <Team/>
       <Footer/>
-    </>
+    </main>
 
 
   )
