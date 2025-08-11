@@ -7,7 +7,7 @@ interface FormData {
 }
 
 const PaymentForm: React.FC = () => {
-  const [formData, setFormData] = useState(FormData)({
+  const [formData, setFormData] = useState<FormData>({
     message: '',
     firstName: '',
     lastName: ''
@@ -111,4 +111,4 @@ const PaymentForm: React.FC = () => {
   );
 };
 
-export default ContactForm;
+export default PaymentForm;
