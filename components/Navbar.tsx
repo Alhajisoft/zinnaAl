@@ -1,34 +1,15 @@
 "use client"
-import React, { useState, useEffect, useRef } from 'react';
-import { User, Menu, X } from 'lucide-react'
+import React, { useState} from 'react';
+import {  Menu, X } from 'lucide-react'
 
 const ZinnaAIWebsite: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
-    const userDropdownRef = useRef<HTMLDivElement | null>(null);
+
 
     const toggleMenu = () => {
         setIsMenuOpen((o) => !o);
     };
-
-    const toggleUserDropdown = () => {
-        setIsUserDropdownOpen((o) => !o);
-    };
-
-    // Close user dropdown when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (e: MouseEvent) => {
-            if (
-                isUserDropdownOpen &&
-                userDropdownRef.current &&
-                !userDropdownRef.current.contains(e.target as Node)
-            ) {
-                setIsUserDropdownOpen(false);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, [isUserDropdownOpen]);
+   
 
     return (
         <div className=" bg-white">

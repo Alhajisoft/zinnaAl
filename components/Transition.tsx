@@ -184,17 +184,17 @@ const Transition: React.FC = () => {
                 </div>
 
                 {/* Company Logos - Responsive Marquee */}
-                <div className="overflow-hidden bg-white/50 rounded-xl py-4 md:py-6">
+                <div className="overflow-hidden rounded-xl py-4 md:py-6">
                     <MockMarquee className="py-2">
                         {companyLogos.map((logo) => (
                             <div
                                 key={logo.id}
-                                className="mx-4 md:mx-6 lg:mx-8 opacity-60 hover:opacity-100 transition-opacity flex items-center justify-center flex-shrink-0"
+                                className="mx-4 md:mx-6 lg:mx-8 opacity-60 hover:opacity-100  flex items-center justify-center flex-shrink-0"
                             >
                                 <img
                                     src={logo.src}
                                     alt={logo.alt}
-                                    className="max-h-8 sm:max-h-10 md:max-h-12 max-w-16 sm:max-w-20 md:max-w-32 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                                    className="max-h-8 sm:max-h-10 md:max-h-12 max-w-16 sm:max-w-20 md:max-w-32 object-contain  hover:grayscale-0 transition-all duration-300"
                                 />
                             </div>
                         ))}

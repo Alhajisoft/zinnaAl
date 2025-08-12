@@ -8,18 +8,18 @@ const Hero: React.FC = () => {
             <section className="py-12 md:py-20 lg:py-24 text-center">
                 {/* Badge */}
                 <div className="inline-flex items-center space-x-2 bg-[#f8f5f3] rounded-full px-3 md:px-4 py-2 mb-6 md:mb-8">
-                    <span className="text-xs md:text-sm text-[#6f4a1c] px-2 py-1 rounded bg-white">
+                    <p className="text-sm text-[#6f4a1c] px-2 py-1 rounded bg-white font-bold">
                         World best 2025 youth agenda
-                    </span>
+                    </p>
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1d1001] mb-4 md:mb-6 max-w-4xl mx-auto leading-tight px-2">
-                    Real World LLM & Agentic AI training for tech talents to scale their career
+                <h1 className="text-2xl   lg:text-[48px] font-bold text-[#1d1001] mb-4 md:mb-6 max-w-7xl mx-auto leading-tight px-2 ">
+                    Real World LLM & Agentic AI training for tech <br/> talents to scale their career
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-base md:text-lg lg:text-xl text-[#6f4a1c] mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+                <p className="text-xl md:text-lg lg:text-sm text-[#5e5d6f] mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-3 font-normal">
                     We empower students to apply Data Science to address real-world challenges and collaborate with citizens,
                     governments and NGOs to drive tangible societal impact.
                 </p>
@@ -29,8 +29,8 @@ const Hero: React.FC = () => {
                     <button className="w-full sm:w-auto bg-[#6f4a1c] text-white px-6 md:px-10 py-3  rounded-lg hover:bg-[#6f4a1c]/80 transition-colors text-base md:text-lg font-medium">
                         View Programs
                     </button>
-                    <button className="w-full sm:w-auto font-bold text-[#6f4a1c] hover:text-[#6f4a1c]/90 transition-colors text-base md:text-lg  underline">
-                        Download Brochure
+                    <button className="w-full sm:w-auto font-normal text-[#5e5d6f] hover:text-[#6f4a1c]/90 transition-colors text-[20px] md:text-lg  underline">
+                        Download Curriculum
                     </button>
                 </div>
             </section>
