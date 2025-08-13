@@ -1,30 +1,30 @@
-import React from 'react'
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import ProblemCards from '@/components/ProblemCards';
-import Transition from '@/components/Transition';
-import Course from "@/components/Course";
-import Testimonies from '@/components/Testimonies';
-import Tutor from '@/components/Tutor';
-import Team from '@/components/Team';
-import Footer from '@/components/Footer'
+import React from "react";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import ProblemCards from "@/components/ProblemCards";
+import Transition from "@/components/Transition";
+import Testimonies from "@/components/Testimonies";
+import Tutor from "@/components/Tutor";
+import Team from "@/components/Team";
+import Footer from "@/components/Footer";
+import CourseList from "@/components/CourseList";
+import Learn from "@/components/Learn";
 
 const page = () => {
   return (
-    <main className='px-3 lg:px-10'>
+    <main className="overflow-hidden">
       <Navbar />
       <Hero />
       <ProblemCards />
       <Transition />
-      <Course />
+      <Learn />
+      <CourseList />
       <Testimonies />
       <Tutor />
-      <Team/>
-      <Footer/>
+      <Team />
+      <Footer />
     </main>
+  );
+};
 
-
-  )
-}
-
-export default page
+export default page;

@@ -87,7 +87,7 @@ const TutorsSection: React.FC = () => {
                 {/* Header */}
                 <div className="text-center mb-8 sm:mb-12 lg:mb-16 space-y-4 sm:space-y-6">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#141414] tracking-tight leading-tight">
-                        Meet some of our TutorsSection
+                        Meet some of our Tutors
                     </h1>
 
                     <p className="text-[#5e5d6f] text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
