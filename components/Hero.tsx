@@ -14,16 +14,19 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-2xl   lg:text-[48px] font-bold text-[#1d1001] mb-4 md:mb-6 max-w-7xl mx-auto leading-tight px-2 ">
-          Real World LLM & Agentic AI training for tech <br /> talents to scale
-          their career
+        <h1 className="text-[28px] sm:font-normal     lg:text-[48px] font-bold text-[#1d1001] mb-4 md:mb-6 max-w-5xl mx-auto leading-tight px-2 ">
+          Real World LLM & Agentic AI talent to <br />
+          global opportunity
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl md:text-lg lg:text-sm text-[#5e5d6f] mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-3 font-normal">
-          We empower students to apply Data Science to address real-world
-          challenges and collaborate with citizens, governments and NGOs to
-          drive tangible societal impact.
+        <p className="text-[8px] lg:text-sm text-[#5e5d6f] mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-3 font-normal">
+          zinna Al is a platform that helps you skill up with Al & ML skill
+          through our live bootcamps
+          <br className="sm:hidden" />
+          and connect you with global tech jobs,access finance, and enjoy our
+          benefits through our Al <br className="sm:hidden" />
+          Engineers community
         </p>
 
         {/* CTA Buttons */}

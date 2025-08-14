@@ -85,31 +85,37 @@ const DataTransitionHero: React.FC = () => {
   ];
 
   return (
-    <div className="relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[400px] bg-gradient-to-br from-amber-900 via-yellow-900 to-amber-800 overflow-hidden">
+    <div className="relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[400px] bg-[#6f4a1c] overflow-hidden">
       {/* Dynamic Stars */}
       {stars.map((star, index) => (
         <Star key={index} {...star} />
       ))}
 
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-transparent to-amber-600/20"></div>
+      <div className="absolute ">
+        <div className="absolute inset-0 bg-[#6f4a1c]"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]"></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center  md:min-h-[500px] lg:min-h-[250px] px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex items-center justify-center  md:min-h-[500px] lg:min-h-[250px] px-20 sm:px-10 lg:px-20">
         <div className="w-full max-w-7xl mx-auto">
           <div className="max-w-2xl lg:max-w-3xl xl:max-w-4xl text-center sm:text-left">
             {/* Title */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight sm:leading-tight md:leading-tight">
-              <span className="block sm:inline">Want To Transition</span>
-              <span className="block sm:inline"> Into Data?</span>
-            </h1>
+            <h2 className="text-[48px] sm:text-2xl md:text-3xl py-15 lg:text-5xl xl:text-6xl font-bold text-white ">
+              <span className="block sm:inline">
+                Want To Transition Into Data?
+              </span>
+            </h2>
 
             {/* Description */}
-            <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto sm:mx-0">
-              {heroData.description}
+            <p className="  sm:text-base md:text-xl lg:text-xl text-white font-normal mb-2 sm:mb-8 md:mb-10 leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto sm:mx-0">
+              <p>
+                "Camera shy? Let the pros hop in. Our team has <br />
+                generated millions of views across different content <br />
+                types.
+              </p>
+            
             </p>
 
             {/* CTA Button */}

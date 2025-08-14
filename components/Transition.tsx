@@ -119,7 +119,7 @@ const Transition: React.FC = () => {
     <section className="mb-8 md:mb-16 px-4 sm:px-6 lg:px-20">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8 md:mb-12">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 text-center sm:text-left">
+        <h2 className="text-[48px] sm:text-4xl lg:text-3xl font-bold text-[#1d1001] text-center sm:text-left">
           Transition into AI Engineering today
         </h2>
       </div>
@@ -135,10 +135,10 @@ const Transition: React.FC = () => {
               <h3 className="text-[30px] sm:text-3xl font-bold text-[#141011] mb-4">
                 Learn from the Best
               </h3>
-              <p className="text-[#5e5d6f] mb-2 text-[12px] leading-relaxed font-normal">
+              <p className="text-[#5e5d6f] mb-2 text-[18px] leading-relaxed font-normal">
                 Stay engaged & learn by doin
               </p>
-              <p className="text-[#5e5d6f] text-[12px] font-normal leading-relaxed">
+              <p className="text-[#5e5d6f] text-[18px] font-normal leading-relaxed">
                 Actively learn via live discussions. Practical, industry-focused
                 AI training designed with input from global tech leaders.
               </p>
@@ -150,12 +150,12 @@ const Transition: React.FC = () => {
                 {platformLogos.map((logo) => (
                   <div
                     key={logo.id}
-                    className={`${logo.bgColor}rounded-lg p-3 md:p-4 flex h-20 items-center justify-center `}
+                    className={`${logo.bgColor} rounded-lg p-2  flex h-30 w-32 items-center justify-center `}
                   >
                     <img
                       src={logo.src}
                       alt={logo.alt}
-                      className="w-full h-full object-contain mx-auto mb-2"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 ))}
@@ -166,9 +166,9 @@ const Transition: React.FC = () => {
 
         {/* Right Column - Build a Portfolio That Speaks */}
         <div className="bg-[#eaebff] rounded-2xl p-6 md:p-8 ">
-          <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4 md:mb-6">
-            <div className="w-12 h-12 rounded-full  flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 ">
-              <div className="w-6 h-6 md:w-8 md:h-8  rounded-full flex items-center justify-center">
+          <div className=" sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4 md:mb-6">
+            <div className="w-12 h-12 rounded-full   items-center justify-center flex-shrink-0 mx-auto sm:mx-0 ">
+              <div className="w-12 h-18   rounded-full flex items-center justify-center">
                 <img
                   src="/AI.png"
                   alt="Ai"
@@ -176,16 +176,14 @@ const Transition: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="text-center align-text-bottom sm:text-left">
-              <h3 className="text-[#39px] sm:text-3xl font-bold text-[#141011] mb-4">
-                Build a Portfolio That Speaks
+            <div className=" align-text-bottom sm:text-left">
+              <h3 className="sm:text-3xl mt-8 font-bold text-[#141011] mb-4">
+                Build a Portfolio <br /> That Speaks
               </h3>
-              <p className="text-[#5e5d6f] font-normal text-base leading-relaxed mb-2">
-                Work on real-world projects to prove your skills.
-              </p>
-              <p className="text-[#5e5d6f] text-base leading-relaxed">
-                Get Matched to Global Opportunities. We don't just teach; we
-                place you in front of the right people .
+              <p className="text-[#5e5d6f] font-normal text-[18px] leading-relaxed mb-2">
+                Work on real-world projects to prove your skills.Get Matched to
+                Global Opportunities. We don't just teach; we place you in front
+                of the right people .
               </p>
             </div>
           </div>
@@ -207,11 +205,13 @@ const Transition: React.FC = () => {
         <div className="overflow-hidden rounded-xl py-4 md:py-6">
           <MockMarquee className="py-2">
             {companyLogos.map((logo) => (
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="h-10 w-24 object-contain"
-              />
+              <div key={logo.id}>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-10 w-24 object-contain"
+                />
+              </div>
             ))}
           </MockMarquee>
         </div>

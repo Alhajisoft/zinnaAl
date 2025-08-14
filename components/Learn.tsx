@@ -13,16 +13,15 @@ const WhoIsThisFor: React.FC = () => {
       {/* Two Container Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {/* Left Container - Software engineers */}
-        <div className="bg-[#ffe7d6] rounded-2xl lg:rounded-3xl p-8 lg:p-12 min-h-[400px] flex flex-col justify-center">
-          <div className="space-y-6">
-            <h2 className="text-[39px] font-bold lg:text-4xl  text-[#141011]">
+        <div className="bg-[#ffe7d6] rounded-2xl lg:rounded-3xl  p-12 lg:p-12 min-h-[400px] flex flex-col justify-center">
+          <div className="space-y-6 mb-30">
+            <h2 className="text-[39px]  font-bold lg:text-4xl  text-[#141011]">
               Software engineers
             </h2>
-            <div className="space-y-2 text-gray-600">
-              <p className="text-[#18px] leading-relaxed font-normal text[5e5d6f]">
+            <div className="space-y-2  text-gray-600">
+              <p className="text-[#18px]  leading-relaxed font-normal text[5e5d6f]">
                 Backend, frontend, or full-stack devs
-              </p>
-              <p className="text-[#18px] leading-relaxed font-normal text[5e5d6f]">
+                <br />
                 ready to move into AI.
               </p>
             </div>
@@ -35,7 +34,7 @@ const WhoIsThisFor: React.FC = () => {
             <h2 className="text-[39px] font-bold lg:text-4xl  text-[#141011]">
               Learn from the Best
             </h2>
-            <div className="space-y-2 text-[5e5d6f]">
+            <div className="space-y-2 text-[#5e5d6f]">
               <p className="text-[#18px] leading-relaxed font-normal ">
                 Stay engaged & learn by doing
               </p>
@@ -48,9 +47,7 @@ const WhoIsThisFor: React.FC = () => {
               <p className="text-[#18px]  leading-relaxed">
                 designed with input from global tech
               </p>
-              <p className="text-[#18px]  leading-relaxed">
-                leaders.
-              </p>
+              <p className="text-[#18px]  leading-relaxed">leaders.</p>
             </div>
           </div>
         </div>

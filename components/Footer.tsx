@@ -191,8 +191,8 @@ const CreativeFooter: React.FC = () => {
           <div className="container mx-auto px-6 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
               {/* Copyright */}
-              <div className="flex items-center space-x-4">
-                <p className="text-gray-400 text-sm">
+              <div className="flex  items-center space-x-4">
+                <p className="text-gray-400 justify-center text-center text-sm">
                   © 2025 <span className="font-bold text-white">RumorHq</span>
                 </p>
               </div>
@@ -208,7 +208,7 @@ const CreativeFooter: React.FC = () => {
                       key={social.label}
                       href={social.href}
                       aria-label={social.label}
-                      className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-110"
+                      className="w-10 h-10 border border-white rounded-full flex items-center justify-center  transition-all duration-300 transform hover:scale-110"
                     >
                       {social.icon}
                     </a>
