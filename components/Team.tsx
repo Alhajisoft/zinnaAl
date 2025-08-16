@@ -98,24 +98,23 @@ const DataTransitionHero: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center  md:min-h-[500px] lg:min-h-[250px] px-20 sm:px-10 lg:px-20">
-        <div className="w-full max-w-7xl mx-auto">
-          <div className="max-w-2xl lg:max-w-3xl xl:max-w-4xl text-center sm:text-left">
+      <div className="relative z-10 flex items-center justify-center  md:min-h-[500px] lg:min-h-[250px]">
+        <div className="w-full max-w-7xl mx-auto px-8">
+          <div className="w-full   text-center  ">
             {/* Title */}
-            <h2 className="text-[48px] sm:text-2xl md:text-3xl py-15 lg:text-5xl xl:text-6xl font-bold text-white ">
-              <span className="block sm:inline">
-                Want To Transition Into Data?
-              </span>
+            <h2 className="text-[33px] lg:text-[48px] py-5 lg:py-15  font-bold text-white ">
+              <span className="block ">Want To Transition Into Data?</span>
             </h2>
 
             {/* Description */}
-            <p className="  sm:text-base md:text-xl lg:text-xl text-white font-normal mb-2 sm:mb-8 md:mb-10 leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto sm:mx-0">
+            <p className="text-xl lg:text-xl text-white font-normal mb-2  leading-relaxed ">
               <p>
-                "Camera shy? Let the pros hop in. Our team has <br />
-                generated millions of views across different content <br />
+                "Camera shy? Let the pros hop in. Our team has{" "}
+                <br className="hidden sm:hidden" />
+                generated millions of views across different content{" "}
+                <br className="hidden sm:hidden" />
                 types.
               </p>
-            
             </p>
 
             {/* CTA Button */}

@@ -37,6 +37,7 @@ const LearningProblemsSection: React.FC = () => {
       description:
         "You follow a structured, beginner-to-pro curriculum tailored for developers transitioning to ML & Agentic AI. You learn the latest, industry-ready tools and frameworks from expert instructors.",
       bgImage: "./bg.png",
+      imageUrl: "./pink.png",
       textColor: "text-[#f8f5f3]",
       badgeColor: "bg-black text-white",
       imagePosition: "right",
@@ -117,9 +118,9 @@ const LearningProblemsSection: React.FC = () => {
         {/* Group 2: Card 2 + Card 3 */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
           {/* Card 2 */}
-          <div className="flex-1 overflow-hidden rounded-2xl lg:rounded-[45px] h-auto lg:h-[320px]">
+          <div className="flex-1 overflow-hidden rounded-2xl lg:rounded-2xl h-auto lg:h-[320px]">
             <div
-              className="p-6 relative h-full min-h-[250px] lg:min-h-0 rounded-2xl lg:rounded-[45px] flex gap-3"
+              className="p-6 relative h-full min-h-[200px] lg:min-h-0 rounded-2xl lg:rounded-2xl flex gap-3"
               style={{
                 backgroundImage: `url(./bg.png)`,
                 backgroundSize: "cover",
@@ -131,12 +132,12 @@ const LearningProblemsSection: React.FC = () => {
                   <span className="w-3 h-3 bg-white rounded-full mr-2"></span>
                   Using the app
                 </div>
-                <h3 className="text-2xl lg:text-[28px] font-bold text-[#f8f5f3] mb-2">
+                <h3 className="text-2xl lg:text-[35px] font-bold text-[#f8f5f3] mb-2">
                   Structured
                   <br />
                   Learning
                 </h3>
-                <p className="text-sm lg:text-[10px] font-normal text-[#f8f5f3] leading-relaxed">
+                <p className="text-sm lg:text-[11px] font-normal text-[#f8f5f3] leading-relaxed">
                   You follow a structured, beginner-to-pro curriculum tailored
                   for
                   <br className="hidden lg:block" />
@@ -145,6 +146,14 @@ const LearningProblemsSection: React.FC = () => {
                   <br className="hidden lg:block" />
                   industry-ready tools and frameworks from expert instructors.
                 </p>
+              </div>
+              {/* Floating image on the right */}
+              <div className="lg:absolute   lg:right-4 lg:top-4 mt-4 lg:mt-0">
+                <img
+                  src="./pink.png"
+                  alt="Structured Learning"
+                  className="w-full  lg:w-auto lg:max-w-none h-auto lg:h-70 object-cover rounded-xl mx-auto lg:mx-0"
+                />
               </div>
             </div>
           </div>

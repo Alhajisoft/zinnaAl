@@ -128,10 +128,10 @@ const CreativeFooter: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-black/70 to-gray-800/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 px-8">
+      <div className="relative z-10 px-3 lg:px-8">
         {/* Main Footer Content */}
-        <div className="container mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
+        <div className="container mx-auto lg:px-6 py-16">
+          <div className="grid grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <div key={section.title} className="lg:col-span-1">
@@ -198,7 +198,7 @@ const CreativeFooter: React.FC = () => {
               </div>
 
               {/* Follow Us & Social Links */}
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-4 ">
                 <span className="text-white-400 text-sm font-medium">
                   Follow Us
                 </span>

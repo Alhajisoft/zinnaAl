@@ -119,7 +119,7 @@ const Transition: React.FC = () => {
     <section className="mb-8 md:mb-16 px-4 sm:px-6 lg:px-20">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8 md:mb-12">
-        <h2 className="text-[48px] sm:text-4xl lg:text-3xl font-bold text-[#1d1001] text-center sm:text-left">
+        <h2 className="text-[38px] sm:text-3xl lg:text-3xl lg:font-bold text-[#1d1001] text-center sm:text-left">
           Transition into AI Engineering today
         </h2>
       </div>
@@ -167,8 +167,8 @@ const Transition: React.FC = () => {
         {/* Right Column - Build a Portfolio That Speaks */}
         <div className="bg-[#eaebff] rounded-2xl p-6 md:p-8 ">
           <div className=" sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4 md:mb-6">
-            <div className="w-12 h-12 rounded-full   items-center justify-center flex-shrink-0 mx-auto sm:mx-0 ">
-              <div className="w-12 h-18   rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full   items-start ">
+              <div className="w-16 h-16  rounded-full ">
                 <img
                   src="/AI.png"
                   alt="Ai"
@@ -177,7 +177,7 @@ const Transition: React.FC = () => {
               </div>
             </div>
             <div className=" align-text-bottom sm:text-left">
-              <h3 className="sm:text-3xl mt-8 font-bold text-[#141011] mb-4">
+              <h3 className="text-xl lg:text-3xl mt-8 font-bold text-[#141011] mb-4">
                 Build a Portfolio <br /> That Speaks
               </h3>
               <p className="text-[#5e5d6f] font-normal text-[18px] leading-relaxed mb-2">
@@ -203,13 +203,13 @@ const Transition: React.FC = () => {
 
         {/* Company Logos - Responsive Marquee */}
         <div className="overflow-hidden rounded-xl py-4 md:py-6">
-          <MockMarquee className="py-2">
+          <MockMarquee className="py-2 ">
             {companyLogos.map((logo) => (
               <div key={logo.id}>
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-10 w-24 object-contain"
+                  className="h-10 w-24 sm:h-12 sm:w-28 object-contain"
                 />
               </div>
             ))}

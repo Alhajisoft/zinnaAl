@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import {
   Check,
   ArrowLeft,
@@ -39,7 +40,16 @@ interface RegistrationData {
   address: string;
   whatsappNumber: string;
 }
-
+// Declare paystack type
+declare global {
+  interface Window {
+    PaystackPop: {
+      setup: (options: any) => {
+        openIframe: () => void;
+      };
+    };
+  }
+}
 // Your Original Course Component with onClick added
 const Course: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<
@@ -54,6 +64,24 @@ const Course: React.FC = () => {
     whatsappNumber: "",
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [paystackLoaded, setPaystackLoaded] = useState(false);
+
+  // Load Paystack script
+  React.useEffect(() => {
+    const loadPaystack = () => {
+      if (window.PaystackPop) {
+        setPaystackLoaded(true);
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = "https://js.paystack.co/v1/inline.js";
+      script.async = true;
+      script.onload = () => setPaystackLoaded(true);
+      document.body.appendChild(script);
+    };
+    loadPaystack();
+  }, []);
+  const PAYSTACK_PUBLIC_KEY = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY;
 
   // Course data array (your original data with prices added)
   const courses: CourseData[] = [
@@ -181,16 +209,16 @@ const Course: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const paystack = (window as any).PaystackPop;
+      const paystackLoaded = (window as any).PaystackPop;
 
-      if (!paystack) {
+      if (!paystackLoaded) {
         alert("Payment system not loaded. Please refresh the page.");
         setIsLoading(false);
         return;
       }
 
-      const handler = paystack.setup({
-        key: "pk_test_your_public_key_here", // Replace with your Paystack public key
+      const handler = paystackLoaded.setup({
+        key: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY,
         email: registrationData.email,
         amount: selectedCourse.price,
         currency: "NGN",
@@ -588,6 +616,19 @@ const Course: React.FC = () => {
                         {registrationData.address}
                       </div>
                     </div>
+                  </div>
+                </div>
+
+                {/* Paystack Status */}
+                <div className="mb-4 text-center">
+                  <div
+                    className={`text-sm ${
+                      paystackLoaded ? "text-green-600" : "text-orange-600"
+                    }`}
+                  >
+                    {paystackLoaded
+                      ? "✅ Payment system ready"
+                      : "⏳ Loading payment system..."}
                   </div>
                 </div>
 
