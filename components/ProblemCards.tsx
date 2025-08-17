@@ -77,8 +77,9 @@ const LearningProblemsSection: React.FC = () => {
           </div>
 
           {/* Card 1 */}
-          <div className="flex-1 rounded-2xl overflow-hidden h-auto lg:h-[280px] lg:ml-10 lg:mt-20">
-            <div className="bg-white p-6 relative h-full min-h-[200px]">
+
+          <div className=" flex-1 rounded-2xl overflow-hidden h-auto lg:h-[280px] lg:ml-10 lg:mt-20">
+            <div className="bg-white px-14  py-6 relative h-full min-h-[200px] flex flex-col lg:flex-row gap-4 lg:gap-3">
               {/* Badge */}
               <div className="inline-flex items-center bg-[#343839] text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
                 <span className="w-3 h-3 bg-white rounded-full mr-2"></span>
@@ -100,11 +101,11 @@ const LearningProblemsSection: React.FC = () => {
               </p>
 
               {/* Image - Creative mobile positioning */}
-              <div className="lg:absolute   lg:right-4 lg:top-4 mt-4 lg:mt-0">
+              <div className="lg:absolute   lg:right-4 lg:top-4 flex-shrink-0">
                 <img
                   src="./burn-out.png"
                   alt="Burn out"
-                  className="w-full  lg:w-auto lg:max-w-none h-auto lg:h-60 object-cover rounded-xl mx-auto lg:mx-0"
+                  className="w-full  lg:w-auto lg:max-w-none h-60 lg:h-60 object-cover rounded-xl"
                   onError={(e) => {
                     e.currentTarget.src =
                       "https://via.placeholder.com/150x300/666/fff?text=Burnout";

@@ -399,7 +399,7 @@ const Course: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right sm:text-right">
                       <div className="text-2xl font-bold">
                         {formatPrice(selectedCourse.price)}
                       </div>

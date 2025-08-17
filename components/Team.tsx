@@ -107,7 +107,7 @@ const DataTransitionHero: React.FC = () => {
             </h2>
 
             {/* Description */}
-            <p className="text-xl lg:text-xl text-white font-normal mb-2  leading-relaxed ">
+            <div className="text-xl lg:text-xl text-white font-normal mb-2  leading-relaxed ">
               <p>
                 "Camera shy? Let the pros hop in. Our team has{" "}
                 <br className="hidden sm:hidden" />
@@ -115,7 +115,7 @@ const DataTransitionHero: React.FC = () => {
                 <br className="hidden sm:hidden" />
                 types.
               </p>
-            </p>
+            </div>
 
             {/* CTA Button */}
             <div className="flex justify-center sm:justify-start">

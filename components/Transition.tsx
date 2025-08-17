@@ -202,14 +202,14 @@ const Transition: React.FC = () => {
         </p>
 
         {/* Company Logos - Responsive Marquee */}
-        <div className="overflow-hidden rounded-xl py-4 md:py-6">
-          <MockMarquee className="py-2 ">
+        <div className="overflow-hidden rounded-xl py-4 ">
+          <MockMarquee className="py-2  ">
             {companyLogos.map((logo) => (
               <div key={logo.id}>
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-10 w-24 sm:h-12 sm:w-28 object-contain"
+                  className="h-24 w-auto lg:w-auto  lg:h-24 object-contain"
                 />
               </div>
             ))}
