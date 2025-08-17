@@ -78,34 +78,37 @@ const LearningProblemsSection: React.FC = () => {
 
           {/* Card 1 */}
 
-          <div className=" flex-1 rounded-2xl overflow-hidden h-auto lg:h-[280px] lg:ml-10 lg:mt-20">
-            <div className="bg-white px-14  py-6 relative h-full min-h-[200px] flex flex-col lg:flex-row gap-4 lg:gap-3">
-              {/* Badge */}
-              <div className="inline-flex items-center bg-[#343839] text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
-                <span className="w-3 h-3 bg-white rounded-full mr-2"></span>
-                Burn out
+          {/* Card 1 */}
+          <div className="flex-1 overflow-hidden rounded-2xl lg:ml-10 lg:mt-20">
+            <div className="bg-white lg:p-5 relative px-13 py-6 h-auto min-h-[200px] flex flex-col lg:flex-row gap-4 lg:gap-8">
+              <div className="flex-1 h-full lg:h-[280px]">
+                {/* Badge */}
+                <div className="inline-flex items-center bg-[#343839] text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
+                  <span className="w-3 h-3 bg-white rounded-full mr-2"></span>
+                  Burn out
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl lg:text-[28px] font-bold text-[#343839] mb-2 leading-tight">
+                  Unfinished
+                  <br />
+                  video-based
+                  <br />
+                  Courses
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-[#343839] opacity-70 mb-4 lg:mb-0">
+                  Electronics, clothing, household item
+                </p>
               </div>
 
-              {/* Title */}
-              <h3 className="text-2xl lg:text-[32px] font-bold text-[#343839] leading-tight mb-2">
-                Unfinished
-                <br />
-                video-based
-                <br />
-                Courses
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm text-[#343839] opacity-70 mb-4 lg:mb-0">
-                Electronics, clothing, household item
-              </p>
-
-              {/* Image - Creative mobile positioning */}
-              <div className="lg:absolute   lg:right-4 lg:top-4 flex-shrink-0">
+              {/* Image aligned like card 3 */}
+              <div className="w-full lg:w-auto lg:h-full flex-shrink-0">
                 <img
                   src="./burn-out.png"
                   alt="Burn out"
-                  className="w-full  lg:w-auto lg:max-w-none h-60 lg:h-60 object-cover rounded-xl"
+                  className="w-full lg:w-auto h-40 lg:h-70 object-cover rounded-lg"
                   onError={(e) => {
                     e.currentTarget.src =
                       "https://via.placeholder.com/150x300/666/fff?text=Burnout";

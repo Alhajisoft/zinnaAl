@@ -625,11 +625,7 @@ const Course: React.FC = () => {
                     className={`text-sm ${
                       paystackLoaded ? "text-green-600" : "text-orange-600"
                     }`}
-                  >
-                    {paystackLoaded
-                      ? "✅ Payment system ready"
-                      : "⏳ Loading payment system..."}
-                  </div>
+                  ></div>
                 </div>
 
                 {/* Pay Now Button */}
