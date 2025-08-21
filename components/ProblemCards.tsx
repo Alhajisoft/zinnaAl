@@ -76,11 +76,9 @@ const LearningProblemsSection: React.FC = () => {
             </p>
           </div>
 
-          {/* Card 1 */}
-
-          {/* Card 1 */}
+          {/* Card 1 - Reduced padding */}
           <div className="flex-1 overflow-hidden rounded-2xl lg:ml-10 lg:mt-20">
-            <div className="bg-white lg:p-5 relative px-13 py-6 h-auto min-h-[200px] flex flex-col lg:flex-row gap-4 lg:gap-8">
+            <div className="bg-white lg:p-4 relative px-12 py-5 h-auto min-h-[200px] flex flex-col lg:flex-row gap-4 lg:gap-6">
               <div className="flex-1 h-full lg:h-[280px]">
                 {/* Badge */}
                 <div className="inline-flex items-center bg-[#343839] text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
@@ -121,17 +119,17 @@ const LearningProblemsSection: React.FC = () => {
 
         {/* Group 2: Card 2 + Card 3 */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
-          {/* Card 2 */}
+          {/* Card 2 - Fixed mobile image positioning */}
           <div className="flex-1 overflow-hidden rounded-2xl lg:rounded-2xl h-auto lg:h-[320px]">
             <div
-              className="p-6 relative h-full min-h-[200px] lg:min-h-0 rounded-2xl lg:rounded-2xl flex gap-3"
+              className="p-6 relative h-full min-h-[200px] lg:min-h-0 rounded-2xl lg:rounded-2xl flex flex-col lg:flex-row gap-3"
               style={{
                 backgroundImage: `url(./bg.png)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              <div className="w-full h-full rounded-lg">
+              <div className="w-full lg:flex-1 h-full rounded-lg">
                 <div className="inline-flex items-center bg-black text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
                   <span className="w-3 h-3 bg-white rounded-full mr-2"></span>
                   Using the app
@@ -141,7 +139,7 @@ const LearningProblemsSection: React.FC = () => {
                   <br />
                   Learning
                 </h3>
-                <p className="text-sm lg:text-[11px] font-normal text-[#f8f5f3] leading-relaxed">
+                <p className="text-sm lg:text-[11px] font-normal text-[#f8f5f3] leading-relaxed mb-4 lg:mb-0">
                   You follow a structured, beginner-to-pro curriculum tailored
                   for
                   <br className="hidden lg:block" />
@@ -151,12 +149,13 @@ const LearningProblemsSection: React.FC = () => {
                   industry-ready tools and frameworks from expert instructors.
                 </p>
               </div>
-              {/* Floating image on the right */}
-              <div className="lg:absolute   lg:right-4 lg:top-4 mt-4 lg:mt-0">
+
+              {/* Image - Mobile: below text, Desktop: floating right */}
+              <div className="lg:absolute lg:right-4 lg:top-4 w-full lg:w-auto flex-shrink-0">
                 <img
                   src="./pink.png"
                   alt="Structured Learning"
-                  className="w-full  lg:w-auto lg:max-w-none h-auto lg:h-70 object-cover rounded-xl mx-auto lg:mx-0"
+                  className="w-full lg:w-auto lg:max-w-none h-40 lg:h-70 object-cover rounded-xl mx-auto lg:mx-0"
                 />
               </div>
             </div>
@@ -195,6 +194,7 @@ const LearningProblemsSection: React.FC = () => {
         </div>
       </div>
 
+      {/* Video Modal Component would go here */}
       <VideoModal
         isOpen={isModalOpen}
         onClose={closeModal}
